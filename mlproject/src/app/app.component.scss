@@ -1,0 +1,15 @@
+.app-container {
+  max-width: 64.125rem;
+  margin: 3.75rem auto;
+  display: flex;
+  @media screen and (max-width: 991px) {
+    max-width: 100%;
+    flex-direction: column;
+    padding: 0 2.5rem;
+    row-gap: 1rem;
+  }
+  app-form {
+    width: 100%;
+    display: block;
+  }
+}

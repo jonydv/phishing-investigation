@@ -37,7 +37,7 @@
     height: 22px;
     line-height: 22px;
     margin: 0;
-    padding: 0.8125em 0;
+    padding: 0.8125em;
     border: 1px solid rgba(0, 0, 0, 0.25);
     width: 25.5rem;
     margin-left: auto;
@@ -105,6 +105,22 @@
       cursor: pointer;
       @media screen and (max-width: 991px) {
         width: 100%;
+      }
+      &.password {
+        width: 14.4375rem;
+        background-color: rgba(65, 137, 230, 0.15);
+        border-color: transparent;
+        color: #3483fa;
+        transition: 0.18s ease-out;
+        transition-property: background-color;
+        border-radius: 0.3125rem;
+        @media screen and (max-width: 991px) {
+          width: 100%;
+          margin-top: 1rem;
+        }
+        &:hover {
+          background-color: rgba(65, 137, 230, 0.2);
+        }
       }
     }
   }

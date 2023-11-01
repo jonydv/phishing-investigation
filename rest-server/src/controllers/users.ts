@@ -4,7 +4,6 @@ import { sendEmail } from '../helpers/email';
 
 const getUsers = async (req: Request, res: Response) => {
   const { limit = 10, from = 0 } = req.query;
-  const query = { state: true };
 
   const [total, users] = await Promise.all([
     User.countDocuments({}),
@@ -22,11 +21,10 @@ const postUsers = async (req: Request, res: Response) => {
   try {
     await user.save();
     res.json({
-      msg: 'post API',
+      msg: 'post user data successfuly',
       user,
     });
   } catch (error) {
-    console.log('aca imprimo el error', error);
     res.status(400).json({
       error,
     });
@@ -34,10 +32,17 @@ const postUsers = async (req: Request, res: Response) => {
 };
 
 const userEmail = async (req: Request, res: Response) => {
-  const responseMsg = await sendEmail();
-  res.json({
-    msg: 'send email',
-    responseMsg,
-  });
+  const { email } = req.body;
+  const responseMsg = await sendEmail(email);
+  if (responseMsg) {
+    res.json({
+      msg: 'email sended successfully',
+      status: 'ok',
+    });
+  } else {
+    return res.status(400).json({
+      error: 'Error sending email',
+    });
+  }
 };
 export { getUsers, postUsers, userEmail };

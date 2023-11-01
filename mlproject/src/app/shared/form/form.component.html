@@ -13,7 +13,15 @@
     </ng-container>
     <ng-container *ngIf="data.formData?.email">
       <label class="form-label">Contraseña</label>
-      <input type="password" class="form-input" formControlName="password" />
+      <input
+        [type]="!showPassword ? 'password' : 'text'"
+        class="form-input"
+        formControlName="password"
+      />
+      <i
+        [class]="!showPassword ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'"
+        (click)="changeInputType()"
+      ></i>
       <div class="form-message"></div>
       <div class="form-action">
         <button class="button-primary" type="submit">Iniciar sesión</button>
@@ -24,13 +32,3 @@
     </ng-container>
   </form>
 </ng-container>
-
-<!-- <form class="form">
-  <label class="form-label">Contraseña</label>
-  <input type="text" class="form-input" formControlName="password"/>
-  <div class="form-message"></div>
-  <div class="form-action">
-    <button class="button-primary" type="submit">Iniciar sesión</button>
-    <button class="button-secondary password">¿Olvidaste tu contraseña?</button>
-  </div>
-</form> -->

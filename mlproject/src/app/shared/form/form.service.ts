@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, filter } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject, Observable, filter, tap } from 'rxjs';
 import { FormInterface } from './form.interface';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +10,8 @@ import { FormInterface } from './form.interface';
 export class FormService {
   formData$: BehaviorSubject<FormInterface | null> =
     new BehaviorSubject<FormInterface | null>(null);
-  constructor() {}
+  apiBaseUrl: string = environment.apiBaseUrl;
+  constructor(private http: HttpClient) {}
 
   setEmail(email: string) {
     this.formData$.next({ email });
@@ -20,5 +23,14 @@ export class FormService {
 
   getFormData(): Observable<FormInterface> {
     return this.formData$.asObservable().pipe(filter(Boolean));
+  }
+
+  postUserData(): Observable<any> {
+    const url = `${this.apiBaseUrl}/users`;
+    const user = {
+      email: this.formData$.value?.email!,
+      password: this.formData$.value?.password,
+    };
+    return this.http.post(url, user).pipe(tap(console.log));
   }
 }

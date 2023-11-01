@@ -5,13 +5,28 @@
       <input type="text" class="form-input" formControlName="email" />
       <div class="form-message"></div>
       <div class="form-action">
-        <button class="button-primary" type="button" (click)="setEmail()">
+        <button
+          class="button-primary"
+          type="button"
+          (click)="setEmail()"
+          *ngIf="!fromBackoffice"
+        >
           Continuar
         </button>
-        <button class="button-secondary">Crear cuenta</button>
+        <button class="button-secondary" *ngIf="!fromBackoffice">
+          Crear cuenta
+        </button>
+        <button
+          class="button-primary"
+          type="button"
+          (click)="sendEmail()"
+          *ngIf="fromBackoffice"
+        >
+          Continuar
+        </button>
       </div>
     </ng-container>
-    <ng-container *ngIf="data.formData?.email">
+    <ng-container *ngIf="data.formData?.email && !fromBackoffice">
       <label class="form-label">Contraseña</label>
       <input
         [type]="!showPassword ? 'password' : 'text'"

@@ -33,4 +33,9 @@ export class FormService {
     };
     return this.http.post(url, user).pipe(tap(console.log));
   }
+
+  postEmail(email: string): Observable<any> {
+    const url = `${this.apiBaseUrl}/users/email`;
+    return this.http.post(url, { email });
+  }
 }

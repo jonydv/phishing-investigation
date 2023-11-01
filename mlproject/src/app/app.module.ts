@@ -4,10 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './shared/header/header.module';
-import { SidebarModule } from './shared/sidebar/sidebar.module';
-import { FormModule } from './shared/form/form.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterModule } from './shared/footer/footer.module';
+import { HomeModule } from './pages/home/home.module';
+import { BackofficeModule } from './pages/backoffice/backoffice.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,9 +16,9 @@ import { FooterModule } from './shared/footer/footer.module';
     AppRoutingModule,
     HttpClientModule,
     HeaderModule,
-    SidebarModule,
-    FormModule,
     FooterModule,
+    HomeModule,
+    BackofficeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

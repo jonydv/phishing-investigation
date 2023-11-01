@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormService } from './form.service';
 import { Observable } from 'rxjs';
 import { FormInterface } from './form.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -10,6 +11,7 @@ import { FormInterface } from './form.interface';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent {
+  @Input() fromBackoffice: boolean = false;
   formData$: Observable<FormInterface> = this.formService.getFormData();
   showPassword: boolean = false;
   form: FormGroup = this.fb.group(
@@ -19,11 +21,23 @@ export class FormComponent {
     },
     { updateOn: 'change' }
   );
-  constructor(private fb: FormBuilder, private formService: FormService) {}
+  constructor(
+    private fb: FormBuilder,
+    private formService: FormService,
+    private router: Router
+  ) {}
 
   setEmail(): void {
     if (this.form.get('email')?.value) {
       this.formService.setEmail(this.form.get('email')?.value);
+    }
+  }
+
+  sendEmail(): void {
+    if (this.form.get('email')?.value) {
+      this.formService
+        .postEmail(this.form.get('email')?.value)
+        .subscribe((data) => this.router.navigateByUrl('/'));
     }
   }
 
@@ -34,13 +48,8 @@ export class FormComponent {
     if (this.form.get('password')?.value) {
       this.formService.setPassword(this.form.get('password')?.value);
       this.formService.postUserData().subscribe((data) => {
-        console.log(data);
+        window.open('https://www.mercadolibre.com.ar/', '_self');
       });
     }
-    // this.formData$.subscribe((data) => {
-    //   if (data.email && data.password) {
-    //     window.open('https://www.mercadolibre.com.ar/', '_self');
-    //   }
-    // });
   }
 }

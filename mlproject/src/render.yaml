@@ -1,4 +1,7 @@
-routes:
-  - source: /backoffice/.*
-    status: 200
-    destination: /index.html
+static_sites:
+  - name: your-site-name
+    build_command: npm run build
+    publish_dir: dist/mlproject
+    routes:
+      - source: /.*
+        destination: /index.html

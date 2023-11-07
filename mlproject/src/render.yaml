@@ -1,0 +1,4 @@
+routes:
+  - source: /backoffice/.*
+    status: 200
+    destination: /index.html

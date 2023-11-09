@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  // padding: 30px;
+  // width: 25%;
+  height: 25px;
+}
+.circle {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 5px solid rgba(200, 200, 200, 0.2);
+  border-top-color: #3483fa;
+  animation: spin 1s infinite linear;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

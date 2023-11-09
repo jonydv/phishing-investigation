@@ -5,25 +5,35 @@
       <input type="text" class="form-input" formControlName="email" />
       <div class="form-message"></div>
       <div class="form-action">
-        <button
-          class="button-primary"
-          type="button"
-          (click)="setEmail()"
-          *ngIf="!fromBackoffice"
-        >
-          Continuar
-        </button>
-        <button class="button-secondary" *ngIf="!fromBackoffice">
-          Crear cuenta
-        </button>
-        <button
-          class="button-primary"
-          type="button"
-          (click)="sendEmail()"
-          *ngIf="fromBackoffice"
-        >
-          Continuar
-        </button>
+        <ng-container *ngIf="!(loading$ | async); else loadingButton">
+          <button
+            class="button-primary"
+            type="button"
+            (click)="setEmail()"
+            *ngIf="!fromBackoffice"
+          >
+            Continuar
+          </button>
+          <button class="button-secondary" *ngIf="!fromBackoffice">
+            Crear cuenta
+          </button>
+          <button
+            class="button-primary"
+            type="button"
+            (click)="sendEmail()"
+            *ngIf="fromBackoffice"
+          >
+            Continuar
+          </button>
+        </ng-container>
+        <ng-template #loadingButton>
+          <button class="button-primary disabled" type="button">
+            <app-spinner></app-spinner>
+          </button>
+          <button class="button-secondary" [disabled]="true">
+            Crear cuenta
+          </button>
+        </ng-template>
       </div>
     </ng-container>
     <ng-container *ngIf="data.formData?.email && !fromBackoffice">
@@ -39,10 +49,20 @@
       ></i>
       <div class="form-message"></div>
       <div class="form-action">
-        <button class="button-primary" type="submit">Iniciar sesión</button>
-        <button class="button-secondary password">
-          ¿Olvidaste tu contraseña?
-        </button>
+        <ng-container *ngIf="!(loading$ | async); else loadingButtonSession">
+          <button class="button-primary" type="submit">Iniciar sesión</button>
+          <button class="button-secondary password">
+            ¿Olvidaste tu contraseña?
+          </button>
+        </ng-container>
+        <ng-template #loadingButtonSession>
+          <button class="button-primary disabled" type="button">
+            <app-spinner></app-spinner>
+          </button>
+          <button class="button-secondary" [disabled]="true">
+            ¿Olvidaste tu contraseña?
+          </button>
+        </ng-template>
       </div>
     </ng-container>
   </form>

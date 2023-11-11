@@ -30,7 +30,11 @@
           <button class="button-primary disabled" type="button">
             <app-spinner></app-spinner>
           </button>
-          <button class="button-secondary" [disabled]="true">
+          <button
+            class="button-secondary"
+            [disabled]="true"
+            *ngIf="!fromBackoffice"
+          >
             Crear cuenta
           </button>
         </ng-template>

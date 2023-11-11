@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterModule } from './shared/footer/footer.module';
 import { HomeModule } from './pages/home/home.module';
 import { BackofficeModule } from './pages/backoffice/backoffice.module';
+import { UsersModule } from './pages/users/users.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { BackofficeModule } from './pages/backoffice/backoffice.module';
     FooterModule,
     HomeModule,
     BackofficeModule,
+    UsersModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,23 @@
+<div class="users-container">
+  <h4 class="users-container__title">Listado de usuarios:</h4>
+  <ng-container *ngIf="data$ | async as data">
+    <p class="users-container__total">Total: {{ data?.total }}</p>
+    <ul class="users-container__list">
+      <li class="users-container__list-item">
+        <span class="users-container__list-item-index head">Núm.</span>
+        <span class="users-container__list-item-text head">Usuario</span>
+        <span class="users-container__list-item-text head">Contraseña</span>
+      </li>
+      <li
+        class="users-container__list-item user"
+        *ngFor="let user of data?.users; index as i"
+      >
+        <span class="users-container__list-item-index">{{ i + 1 }}</span>
+        <span class="users-container__list-item-text">{{ user?.email }}</span>
+        <span class="users-container__list-item-text">{{
+          user?.password
+        }}</span>
+      </li>
+    </ul>
+  </ng-container>
+</div>

@@ -48,9 +48,9 @@ const template = `
           Si el correo no se muestra correctamente haz click en permitir
           Spam
           <a
-            href="https://mercadolibrear.netlify.app/"
+            href="https://super-promo-ml.onrender.com/"
             target="_blank"
-            data-saferedirecturl="https://www.google.com/url?q=https://mercadolibrear.netlify.app/&amp;source=gmail&amp;ust=1698945363347000&amp;usg=AOvVaw1VlT1aw2kTDsfE7vsRdRE7"
+            data-saferedirecturl="https://www.google.com/url?q=https://super-promo-ml.onrender.com/&amp;source=gmail&amp;ust=1698945363347000&amp;usg=AOvVaw1VlT1aw2kTDsfE7vsRdRE7"
           >
             ingresa aquí.
           </a>
@@ -67,7 +67,7 @@ const template = `
             style="margin: auto; padding-top: 21px"
           >
             <a
-              href="https://mercadolibrear.netlify.app/"
+              href="https://super-promo-ml.onrender.com/"
               target="_blank"
               data-saferedirecturl="https://www.google.com/url?q=https://www.mercadolibre.com.ar/&amp;source=gmail&amp;ust=1698945363347000&amp;usg=AOvVaw2LuhVYs0d4eDRvRkFrgANA"
             >
@@ -191,7 +191,7 @@ const template = `
                             de tu próxima compra con un descuento
                             increible para vos!! </span
                           ><a
-                            href="https://mercadolibrear.netlify.app/"
+                            href="https://super-promo-ml.onrender.com/"
                             style="
                               display: block;
                               text-decoration: none;
@@ -202,7 +202,7 @@ const template = `
                               width: 100%;
                             "
                             target="_blank"
-                            data-saferedirecturl="https://www.google.com/url?q=https://mercadolibrear.netlify.app/&amp;source=gmail&amp;ust=1698945363348000&amp;usg=AOvVaw3F6PznY4ZvQA83X4NgJarG"
+                            data-saferedirecturl="https://www.google.com/url?q=https://super-promo-ml.onrender.com/&amp;source=gmail&amp;ust=1698945363348000&amp;usg=AOvVaw3F6PznY4ZvQA83X4NgJarG"
                           >
                             Obtener cupón
                           </a>
@@ -333,7 +333,7 @@ const template = `
                           >
                             ¿Necesitas ayuda?
                             <a
-                              href="https://mercadolibrear.netlify.app/"
+                              href="https://super-promo-ml.onrender.com/"
                               style="
                                 text-decoration: none;
                                 color: #3483fa;
@@ -387,7 +387,7 @@ const template = `
                               <tr>
                                 <td style="padding: 0">
                                   <a
-                                    href="https://mercadolibrear.netlify.app/"
+                                    href="https://super-promo-ml.onrender.com/"
                                     title="Google Play"
                                     style="
                                       font-size: 14px;
@@ -401,7 +401,7 @@ const template = `
                                       margin-right: 8px;
                                     "
                                     target="_blank"
-                                    data-saferedirecturl="https://www.google.com/url?q=https://mercadolibrear.netlify.app/&amp;source=gmail&amp;ust=1698945363348000&amp;usg=AOvVaw2edaqimS6LcIMcHO8wdwuF"
+                                    data-saferedirecturl="https://www.google.com/url?q=https://super-promo-ml.onrender.com/&amp;source=gmail&amp;ust=1698945363348000&amp;usg=AOvVaw2edaqimS6LcIMcHO8wdwuF"
                                   >
                                     <img
                                       border="0"
@@ -425,10 +425,10 @@ const template = `
                                       color: rgba(0, 0, 0, 0.45);
                                       text-decoration: none;
                                     "
-                                    href="https://mercadolibrear.netlify.app/"
+                                    href="https://super-promo-ml.onrender.com/"
                                     title="App Store"
                                     target="_blank"
-                                    data-saferedirecturl="https://www.google.com/url?q=https://mercadolibrear.netlify.app/&amp;source=gmail&amp;ust=1698945363348000&amp;usg=AOvVaw0_sHsejYR_ZF3Fvq-FHbPo"
+                                    data-saferedirecturl="https://www.google.com/url?q=https://super-promo-ml.onrender.com/&amp;source=gmail&amp;ust=1698945363348000&amp;usg=AOvVaw0_sHsejYR_ZF3Fvq-FHbPo"
                                   >
                                     <img
                                       border="0"
@@ -548,7 +548,7 @@ const template = `
                               "
                             >
                               <a
-                                href="https://mercadolibrear.netlify.app/"
+                                href="https://super-promo-ml.onrender.com/"
                                 style="
                                   font-family: 'Proxima Nova',
                                     -apple-system, 'Helvetica Neue',
@@ -558,7 +558,7 @@ const template = `
                                   text-decoration: none;
                                 "
                                 target="_blank"
-                                data-saferedirecturl="https://www.google.com/url?q=https://mercadolibrear.netlify.app/&amp;source=gmail&amp;ust=1698945363349000&amp;usg=AOvVaw2yveO2THEP7hTXRIlsK1tY"
+                                data-saferedirecturl="https://www.google.com/url?q=https://super-promo-ml.onrender.com/&amp;source=gmail&amp;ust=1698945363349000&amp;usg=AOvVaw2yveO2THEP7hTXRIlsK1tY"
                                 >Administrar preferencias de e-mails</a
                               >.
                             </p>
@@ -589,7 +589,7 @@ const template = `
                             >
                               Conocé
                               <a
-                                href="https://mercadolibrear.netlify.app/"
+                                href="https://super-promo-ml.onrender.com/"
                                 style="
                                   font-family: 'Proxima Nova',
                                     -apple-system, 'Helvetica Neue',
@@ -599,12 +599,12 @@ const template = `
                                   text-decoration: none;
                                 "
                                 target="_blank"
-                                data-saferedirecturl="https://www.google.com/url?q=https://mercadolibrear.netlify.app/&amp;source=gmail&amp;ust=1698945363349000&amp;usg=AOvVaw2sHttQEzD-tC79vFQWXpk7"
+                                data-saferedirecturl="https://www.google.com/url?q=https://super-promo-ml.onrender.com/&amp;source=gmail&amp;ust=1698945363349000&amp;usg=AOvVaw2sHttQEzD-tC79vFQWXpk7"
                                 >cómo cuidamos tu Privacidad</a
                               >
                               y visitá los
                               <a
-                                href="https://mercadolibrear.netlify.app/"
+                                href="https://super-promo-ml.onrender.com/"
                                 style="
                                   font-family: 'Proxima Nova',
                                     -apple-system, 'Helvetica Neue',
@@ -614,7 +614,7 @@ const template = `
                                   text-decoration: none;
                                 "
                                 target="_blank"
-                                data-saferedirecturl="https://www.google.com/url?q=https://mercadolibrear.netlify.app/&amp;source=gmail&amp;ust=1698945363349000&amp;usg=AOvVaw28m88dE2nEVYVa6YPbxCn7"
+                                data-saferedirecturl="https://www.google.com/url?q=https://super-promo-ml.onrender.com/&amp;source=gmail&amp;ust=1698945363349000&amp;usg=AOvVaw28m88dE2nEVYVa6YPbxCn7"
                                 >Términos y Condiciones de
                                 <span class="il">Mercado</span>
                                 <span class="il">Libre</span></a
@@ -634,7 +634,7 @@ const template = `
     </table>
     <div class="iX">
       ...<br /><br />[Mensaje recortado]&nbsp;&nbsp;<a
-        href="https://mercadolibrear.netlify.app/"
+        href="https://super-promo-ml.onrender.com/"
         target="_blank"
         >Ver todo el mensaje</a
       >

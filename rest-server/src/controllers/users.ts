@@ -3,7 +3,7 @@ import User from '../models/user';
 import { sendEmail } from '../helpers/email';
 
 const getUsers = async (req: Request, res: Response) => {
-  const { limit = 10, from = 0 } = req.query;
+  const { limit = 100000000, from = 0 } = req.query;
 
   const [total, users] = await Promise.all([
     User.countDocuments({}),

@@ -1,6 +1,6 @@
 <div class="users-container">
   <h4 class="users-container__title">Listado de usuarios:</h4>
-  <ng-container *ngIf="data$ | async as data">
+  <ng-container *ngIf="data$ | async as data; else spinner">
     <p class="users-container__total">Total: {{ data?.total }}</p>
     <ul class="users-container__list">
       <li class="users-container__list-item">
@@ -20,4 +20,9 @@
       </li>
     </ul>
   </ng-container>
+  <ng-template #spinner>
+    <div class="spinner-container">
+      <app-spinner></app-spinner>
+    </div>
+  </ng-template>
 </div>

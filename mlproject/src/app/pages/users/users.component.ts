@@ -11,7 +11,5 @@ export class UsersComponent {
   data$: Observable<any> = this.usersService.getUsers();
   constructor(private usersService: UsersService) {}
 
-  ngOnInit(): void {
-    this.usersService.getUsers().subscribe();
-  }
+  ngOnInit(): void {}
 }
